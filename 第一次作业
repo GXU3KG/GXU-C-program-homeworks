@@ -95,3 +95,4 @@ int main()
     printf ("\nthe biggest number is %d \n", max);
     return 0;
 }
+
