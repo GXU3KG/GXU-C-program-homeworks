@@ -9,25 +9,25 @@ int main()
 {
     char ch; 
     printf("please input a character");
-    ch = getchar();
+    ch = getchar();          //传入字符
     
-    if (ch >= '0' && ch <= '9')
+    if (ch >= '0' && ch <= '9')      //判断是否为数字
     {
         printf("%c\n", '*');
     }
-    else if(ch >= 'a' && ch <= 'z')
+    else if(ch >= 'a' && ch <= 'z')       //判断是否为小写字母
     {
-        ch = ch - 32;
+        ch = ch - 32;                  //小写字母转换
         printf("%c\n", ch);
     }
-    else if(ch >= 'A' && ch <= 'Z')
+    else if(ch >= 'A' && ch <= 'Z')      //判断是否为大写字母
     {
-        ch = ch + 32;
+        ch = ch + 32;              // 大写字母转换
         printf("%c\n", ch);
     }
     else
     {
-        printf("%c\n", '#'); 
+        printf("%c\n", '#');     //其他字符输出#
     }
 
 }
@@ -42,11 +42,11 @@ int main()
 {
     int i;
     printf("please input ten characters\n");
-    for(i=1; i<=10; ++i)
+    for(i=1; i<=10; ++i)                    //设置10次循环
     {
-        char ch;
-        scanf("%c", &ch);
-        if (ch >= 'A' && ch <= 'Z')
+        char ch;                          
+        scanf("%c", &ch);                        //传入字符
+        if (ch >= 'A' && ch <= 'Z')             //同上作出判断转换
         {
             ch = ch + 32;
             printf("%c", ch);
@@ -72,19 +72,19 @@ int main()
 /*第三题：输入三个1-100之间的随机数，输出其中的最
   大值。（提示：随机数用rand()函数和srand()函数）*/
   
-  #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 int main()
 {
     int num[3], i, max=0;
     srand((unsigned int)time(NULL));
-    for (i = 0; i < 3; ++i)
+    for (i = 0; i < 3; ++i)   //循环生成3个随机数
     {
         num[i] = rand()%100+1;
-        if(max < num[i])
+        if(max < num[i])    // 判断新生成的数与现有最大的数
         {
-            max = num[i];
+            max = num[i];   // 设置max变量为目前最大的数
         }
     }
     printf("the 3 random numbers we have is:");
