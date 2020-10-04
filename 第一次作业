@@ -1,0 +1,97 @@
+//第一次作业
+
+
+/*第一题：输入一个字符，若它是大写字母则转成小写字母，若它是小写
+  字母则转成大写字母，若它是数字字符则转成*，若是其他字符则转成#输出。*/
+  
+#include<stdio.h>
+int main()
+{
+    char ch; 
+    printf("please input a character");
+    ch = getchar();
+    
+    if (ch >= '0' && ch <= '9')
+    {
+        printf("%c\n", '*');
+    }
+    else if(ch >= 'a' && ch <= 'z')
+    {
+        ch = ch - 32;
+        printf("%c\n", ch);
+    }
+    else if(ch >= 'A' && ch <= 'Z')
+    {
+        ch = ch + 32;
+        printf("%c\n", ch);
+    }
+    else
+    {
+        printf("%c\n", '#'); 
+    }
+
+}
+
+
+
+/*第二题:输入10个字符，将其中的大写字母转成小写字母，其中的小写
+  字母转成大写字母，其中的数字字符转成*，其他字符转成#输出。*/
+  
+#include<stdio.h>
+int main()
+{
+    int i;
+    printf("please input ten characters\n");
+    for(i=1; i<=10; ++i)
+    {
+        char ch;
+        scanf("%c", &ch);
+        if (ch >= 'A' && ch <= 'Z')
+        {
+            ch = ch + 32;
+            printf("%c", ch);
+        }
+        else if (ch >= 'a' && ch <= 'z')
+        {
+            ch = ch - 32;
+            printf("%c", ch);
+        }
+        else if(ch >= '0' && ch <= '9')
+        {
+            printf("%c", '*');
+        }
+        else
+        {
+            printf("%c", '#'); 
+        }
+    }
+    return 0;
+}
+
+
+/*第三题：输入三个1-100之间的随机数，输出其中的最
+  大值。（提示：随机数用rand()函数和srand()函数）*/
+  
+  #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+    int num[3], i, max=0;
+    srand((unsigned int)time(NULL));
+    for (i = 0; i < 3; ++i)
+    {
+        num[i] = rand()%100+1;
+        if(max < num[i])
+        {
+            max = num[i];
+        }
+    }
+    printf("the 3 random numbers we have is:");
+    for (i = 0; i < 3; ++i)
+    {
+        printf ("%d  ", num[i]);
+    }
+    printf ("\nthe biggest number is %d \n", max);
+    return 0;
+}
