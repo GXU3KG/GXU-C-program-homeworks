@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+  int npc_fist, npc_call, my_fist, my_call;
+  npc_fist = rand()%5;
+  while(1)
+  {
+    npc_call = rand()%5 + npc_fist;
+    if(npc_call != 5)
+    {
+      break;
+    }
+  }
+  printf("好耍来啊！（请出拳 后喊数 空格隔开\n");
+  scanf("%d%d", &my_fist, &my_call);
+  printf("电脑出%d,喊%d，你出%d，喊%d\n", npc_fist, npc_call, my_fist, my_call);
+  if(my_call == 5 || my_call - my_fist > 5)
+  {
+    printf("错码罚一杯\n");
+  }
+  else if(my_call == npc_call)
+  {
+    printf("继续来啊\n");
+  }
+  else if(my_call == npc_fist + my_fist)
+  {
+    printf("电脑喝一杯\n");
+  }
+  else if(npc_call == npc_fist + my_fist)
+  {
+    printf("屎码，喝一杯\n");
+  }
+  else
+    printf("继续来过\n");
+    return 0;
+}
