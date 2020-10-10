@@ -1,0 +1,19 @@
+int main()
+{
+    
+    int sum = 0, num;
+    printf("请输入数字，按回车继续，输入0退出\n");
+    scanf("%d", &num);
+    while(num != 0)
+    {
+        
+        if (num > 0)
+        {
+            sum = sum + num;
+        }
+        scanf("%d", &num);
+    }
+    
+    printf("正整数和为%d", sum);
+    return 0;
+}
