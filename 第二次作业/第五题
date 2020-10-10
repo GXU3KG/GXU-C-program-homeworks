@@ -1,5 +1,5 @@
+//输入n,求n的阶乘。
 #include <stdio.h>
-
 int main()
 {
     
