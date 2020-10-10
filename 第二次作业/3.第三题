@@ -6,12 +6,12 @@ int main()
     int sum = 0, num;
     printf("请输入数字，按回车继续，输入0退出\n");
     scanf("%d", &num);
-    while(num != 0)
+    while(num != 0)        //设置循环 当数字为0时终止
     {
         
-        if (num > 0)
+        if (num > 0)           //判断条件 
         {
-            sum = sum + num;
+            sum = sum + num;      //数字为正数加入总数
         }
         scanf("%d", &num);
     }
