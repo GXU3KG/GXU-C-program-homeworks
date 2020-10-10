@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    int n,sum=1;
+    printf("请输入正整数n\n");
+    scanf("%d", &n);
+    while(n != 0)
+    {
+        sum = sum * n;
+        n = n - 1;
+    }
+    
+    printf("n的阶层为%d", sum);
+    return 0;
+}
