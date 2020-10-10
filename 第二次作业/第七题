@@ -1,0 +1,18 @@
+//输入一个整数n,统计n的位数。比如输入12503,则输出12593的位数为5，输入123，输出123的位数为3。用循环实现。
+#include <stdio.h>
+int main()
+{
+    
+    int count=0, n;
+    printf("请输入n\n");
+    scanf("%d", &n);
+    while(n != 0)
+    {
+        
+        n = n/10;
+        count ++;
+    }
+    
+    printf("n的位数为%d", count);
+    return 0;
+}
