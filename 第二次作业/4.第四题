@@ -11,7 +11,7 @@ int main()
         
         if (num > 0)
         {
-            count ++;
+            count ++;   //设置数字为正数数计数器加一，其他同上题
         }
         scanf("%d", &num);
     }
