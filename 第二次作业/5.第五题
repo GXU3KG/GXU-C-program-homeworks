@@ -6,10 +6,10 @@ int main()
     int n,sum=1;
     printf("请输入正整数n\n");
     scanf("%d", &n);
-    while(n != 0)
+    while(n != 0)    //设置循环条件，当阶乘乘到1时退出循环
     {
-        sum = sum * n;
-        n = n - 1;
+        sum = sum * n;   
+        n = n - 1;    //乘后数字减一进入下一个运算
     }
     
     printf("n的阶层为%d", sum);
