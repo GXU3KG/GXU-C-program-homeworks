@@ -10,7 +10,7 @@ int main()
        scanf("%lf", &num[i]);
        if (num[i] >= 0 && num[i] == (int)num[i])
        {
-           count++;
+           count++;              //数字为正整数是计数器加一，其他地方同第一题
        }
        i++;
    }
