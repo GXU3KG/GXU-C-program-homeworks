@@ -1,5 +1,5 @@
+//输入10个整数，求其中正整数的和。
 #include <stdio.h>
-
 int main()
 {
     int sum=0, i=1;
