@@ -1,5 +1,5 @@
+//输入10个整数，统计其中正整数的个数。
 #include <stdio.h>
-
 int main()
 {
     int count=0, i=1;
