@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int count=0, i=1;
+    double num[10];
+    printf("请输入十个数字，用空格隔开，按回车键结束");
+   while(i <= 10)
+   {
+       scanf("%lf", &num[i]);
+       if (num[i] >= 0 && num[i] == (int)num[i])
+       {
+           count++;
+       }
+       i++;
+   }
+    
+    printf("%d", count);
+    return 0;
+}
