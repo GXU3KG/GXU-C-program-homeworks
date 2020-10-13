@@ -2,15 +2,14 @@
 #include <stdio.h>
 int main()
 {
-    int sum=0, i=1;
-    double num[10];
+    int sum=0, i=1, num;
     printf("请输入十个数字，用空格隔开，按回车键结束");
    while(i <= 10)               //设置10次循环
    {
-       scanf("%lf", &num[i]);          //按顺序读入浮点数
-       if (num[i] >= 0 && num[i] == (int)num[i])        //判断是否是正整数
+       scanf("%d", &num);          //按顺序读入浮点数
+       if (num >= 0)        //判断是否是正整数
        {
-           sum = sum + (int)num[i];                 //如果是正整数加入总数
+           sum = sum + num;                 //如果是正整数加入总数
        }
        i++;                                
    }
