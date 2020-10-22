@@ -1,1 +1,21 @@
-//收藏过5解锁
+#include<stdio.h>
+int main()
+{
+    int x, left, left2, fen5, fen2, fen1, count=0;
+    scanf("%d", &x);
+    for(fen5=x/5; fen5>0; fen5=fen5 - 1)
+    {
+        left = x - 5*fen5;
+        for(fen2=left/2; fen2>0; fen2=fen2 - 1)
+        {
+            left2 = left - 2*fen2;
+            if(left2 >0)
+            {
+                printf("fen5:%d, fen2:%d, fen1:%d, total:%d\n", fen5, fen2, left2, fen5+fen2+left2);
+                count ++;
+            }
+        }
+    }
+    printf("count = %d", count);
+    return 0;
+}
