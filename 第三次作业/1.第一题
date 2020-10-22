@@ -1,1 +1,31 @@
-//收藏过3解锁
+#include<stdio.h>
+#include<math.h>
+
+double term_n(int n)
+{
+    int i, x = 1;
+    for(i=1; i<n; i++)
+    {
+        x = x * -1;
+    }
+    return (double)x/(1+3*(n-1));
+}
+
+int main()
+{
+    double eps, sum=0, term;
+    int n=1;
+    scanf("%lf", &eps);
+    while(1)
+    {
+        term = term_n(n);
+        sum = sum + term;
+        if(fabs(term) <= eps)
+        {
+            break;
+        }
+        n++;
+    }
+    printf("sum = %.6lf", sum);
+    return 0;
+}
