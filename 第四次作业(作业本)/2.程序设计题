@@ -1,0 +1,31 @@
+//  4
+
+#include <stdio.h>
+
+int prime(int m)
+{
+    int i;
+    for(i=2; i<=m/2+1; i++)
+    {
+        if(m%i==0) 
+        return 0;
+    }
+    return 1;        
+}
+
+int main()
+{
+    int m, n, sum;
+    scanf("%d%d", &m, &n);
+    while(m <= n)
+    {
+        if(prime(m))
+        {
+            printf("%d ", m);
+            sum = sum + m;
+        }
+        m++;
+    }
+    printf("\n%d", sum);
+    return 0;
+}
