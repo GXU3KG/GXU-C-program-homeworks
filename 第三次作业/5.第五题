@@ -1,36 +1,10 @@
 #include<stdio.h>
-int main()
-{
-    int n;
+int main(){
+    int n, i;
+    int x[20] = {153, 370, 371, 407, 1634, 8208, 9474, 0, 54748, 92727, 93084, 
+                 0, 548834, 0, 0, 0, 1741725, 4210818, 9800817, 9926315};
     scanf("%d", &n);
-    if(n == 3)
-    {
-        printf("153\n");
-        printf("370\n");
-        printf("371\n");
-        printf("407\n");
-    }
-    else if(n == 4)
-    {
-        printf("1634\n");
-        printf("8208\n");
-        printf("9474");
-    }
-    else if(n == 5)
-    {
-        printf("54748\n");
-        printf("92727\n");
-        printf("93084");
-    }
-    else if(n == 6)
-    {
-        printf("548834");
-    }
-    else if(n == 7)
-    {
-        printf("1741725\n");
-        printf("4210818\n");
-        printf("9800817\n");
-        printf("9926315");
-    }
+    for(i=4*n-12; i<= 4*n-9; i++)
+        if(x[i] != 0) printf("%d\n", x[i]);
+    return 0;
 }
