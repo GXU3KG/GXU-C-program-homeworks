@@ -1,0 +1,14 @@
+double funcos(double e, double x)
+{
+	int i, k=-1;
+	double nu=1, de=1, term=1, sum=1;
+	for(i=2; term>e; i+=2)
+	{
+		nu = nu * x * x;
+		de = de * i * (i - 1);
+		sum = sum + k * nu / de;
+		term = nu / de;
+		k = -k;
+	}
+	return sum;
+}
