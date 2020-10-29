@@ -10,6 +10,5 @@ void StringCount( char s[] )
         else                                other++;
         i++;
     }
-    printf("letter = %d, blank = %d, digit = %d, 
-        other = %d", letter, blank, digit, other);
+    printf("letter = %d, blank = %d, digit = %d, other = %d", letter, blank, digit, other);
 }
