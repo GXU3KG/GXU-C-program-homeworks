@@ -1,0 +1,25 @@
+int main()
+{
+    int n, i, num, temp, max=0;
+    int count[10] = {0};
+    scanf("%d", &n);
+    
+    for(i=0; i<n; i++ )
+    {
+        scanf("%d", &num);
+        if(num == 0) count[0] += 1;
+        while(num != 0)
+        {
+            temp = num % 10;
+            count[temp] += 1;
+            num /= 10;
+        }
+    }
+    
+    for(i=0; i<10; i++) if(max<count[i]) max = count[i];
+    
+    printf("%d:", max);
+    for(i=0; i<10; i++) if(max == count[i]) printf(" %d", i);
+        
+    return 0;
+}
