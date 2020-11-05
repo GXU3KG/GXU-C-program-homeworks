@@ -1,0 +1,25 @@
+#include <stdio.h>
+ 
+int fib( int n )
+{
+    if(n<3) return 1;
+    else return fib(n-1) + fib(n-2);
+}
+
+
+void PrintFN( int m, int n )
+{
+    int i=1, index=0;
+    while(fib(i) <= n)
+    {
+        if(fib(i) >= m)
+        {
+            index++;
+            if(index==1) printf("%d", fib(i));
+            else printf(" %d", fib(i));
+        }
+        i++;
+    }
+    if(index==0)
+    printf("No Fibonacci number\n");
+}
