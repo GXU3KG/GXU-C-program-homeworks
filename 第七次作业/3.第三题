@@ -1,0 +1,15 @@
+int reverse( int number )
+{
+    int num=0, k=1;
+    if(number < 0)
+    {
+        k=-1;
+        number = -number;
+    }
+    while(number != 0)
+    {
+        num = num * 10 + number % 10;
+        number = number / 10;
+    }
+    return k * num;
+}
