@@ -8,15 +8,15 @@ void PrintFN( int m, int n )
 {
     int i, d=0;
     int a[20] = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765};
-    for(i = 0; i<20; i++)
+    for(i = 0; i < 20; i++)
     {
         if(a[i] >= m && a[i] <= n)
         {
-            if(d ==1) printf(" ");
+            if(d == 1) printf(" ");
             printf("%d", a[i]);
             d = 1;
         }
     }
-    if(d ==0) printf("No Fibonacci number");
+    if(d == 0) printf("No Fibonacci number");
     return;
 }
