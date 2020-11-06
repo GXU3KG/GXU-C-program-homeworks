@@ -1,6 +1,6 @@
 int main()
 {
-    int n, i, num, temp, max=0;
+    int n, i, num, max=0;
     int count[10] = {0};
     scanf("%d", &n);
     
@@ -8,10 +8,9 @@ int main()
     {
         scanf("%d", &num);
         if(num == 0) count[0] += 1;
-        while(num != 0)
+        while(num)
         {
-            temp = num % 10;
-            count[temp] += 1;
+            count[num % 10]++;
             num /= 10;
         }
     }
