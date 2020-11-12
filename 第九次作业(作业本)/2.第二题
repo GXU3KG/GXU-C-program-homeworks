@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main () 
+{
+	int i, index=0;
+	char c, str[80];
+	scanf("%s", str);
+	while(str[index] != '\0')
+	        index++;
+	for(i=0; i<index/2; i++)
+	{
+	    c = str[i];
+	    str[i] = str[index-i-1];
+	    str[index-i-1] = c;
+	}
+	printf("%s", str);
+	return 0;
+}
