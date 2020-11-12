@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main () {
+	int i, index=81;
+	char ch;
+	char str[80];
+	scanf("%c", ch);
+	scanf("%s", str);
+	
+	for(i=0; i<20; i++)
+	{
+		if(str[i] == ch)
+			index = i;
+	}
+	
+	if(index == 81)
+		printf("Not Found");
+	else
+		printf("%d", index);
+}
