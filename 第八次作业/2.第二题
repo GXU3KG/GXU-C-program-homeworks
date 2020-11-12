@@ -1,0 +1,8 @@
+int ArrayShift( int a[], int n, int m )
+{
+	int i, b[n];
+	for(i=0; i<n; i++)
+		b[(i+m)%n] = a[i];
+	for(i=0; i<n; i++)
+        a[i] = b[i];
+}
